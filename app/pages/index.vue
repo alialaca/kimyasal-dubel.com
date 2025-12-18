@@ -2,35 +2,31 @@
 const products = [
   {
     titleMain: 'V-PLUS',
-    description:
-      'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir. Kokusuz yapısı, yüksek tutunma gücü ve ETA onaylarıyla profesyonel uygulamalarda güvenle tercih edilir. Kuru veya yaş zeminlerde üstün performans sunar.',
-    productImage: '/images/kimyasal-dubel.png',
+    description: 'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir. Kokusuz yapısı, yüksek tutunma gücü ve ETA onaylarıyla profesyonel uygulamalarda güvenle tercih edilir. Kuru veya yaş zeminlerde üstün performans sunar.',
+    productImage: '/images/v-plus.png',
     buttonText: 'Ürün Detayı',
-    buttonLink: '#',
+    buttonLink: 'products/v-plus',
   },
   {
-    titleMain: 'EPOXY',
-    description:
-      'Stiren içermeyen, iki bileşenli saf epoksi formülüyle FixPro EPX-100; sismik dayanım, yangına karşı direnç ve 100 yıla varan hizmet ömrü sunar. ETA belgeli bu ürün, çatlaklı/çatlaksız betonlar, su dolu delikler, tuğla ve ahşap gibi zorlu yüzeylerde yüksek tutunma performansı sağlar. Derin ankrajlar, düşük sıcaklıkta uygulamalar ve yapı güçlendirme projeleri için idealdir.',
-    productImage: '/images/celik-dubel.png',
+    titleMain: 'E-PLUS',
+    description: 'Stiren içermeyen, iki bileşenli saf epoksi formülüyle FixPro EPX-100; sismik dayanım, yangına karşı direnç ve 100 yıla varan hizmet ömrü sunar. ETA belgeli bu ürün, çatlaklı/çatlaksız betonlar, su dolu delikler, tuğla ve ahşap gibi zorlu yüzeylerde yüksek tutunma performansı sağlar. Derin ankrajlar, düşük sıcaklıkta uygulamalar ve yapı güçlendirme projeleri için idealdir.',
+    productImage: '/images/e-plus.png',
     buttonText: 'Ürün Detayı',
-    buttonLink: '#',
+    buttonLink: 'products/e-plus',
   },
   {
-    titleMain: 'V-PLUS',
-    description:
-        'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir. Kokusuz yapısı, yüksek tutunma gücü ve ETA onaylarıyla profesyonel uygulamalarda güvenle tercih edilir. Kuru veya yaş zeminlerde üstün performans sunar.',
-    productImage: '/images/kimyasal-dubel.png',
+    titleMain: 'EPOXY 21',
+    description: 'EPOXY 21, ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu, su dolu deliklerde dahi güçlü performansı ve 2500 mm’ye kadar ankrajlama derinliği ile büyük ölçekli projelerde güvenle kullanılır. Elektrik izolasyonu ve tiksotropik yapısıyla da fark yaratır.',
+    productImage: '/images/epoxy21.png',
     buttonText: 'Ürün Detayı',
-    buttonLink: '#',
+    buttonLink: '/products/epoxy21',
   },
   {
-    titleMain: 'V-PLUS',
-    description:
-        'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir. Kokusuz yapısı, yüksek tutunma gücü ve ETA onaylarıyla profesyonel uygulamalarda güvenle tercih edilir. Kuru veya yaş zeminlerde üstün performans sunar.',
-    productImage: '/images/kimyasal-dubel.png',
+    titleMain: 'VINIL',
+    description: 'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir. Kokusuz yapısı, yüksek tutunma gücü ve ETA onaylarıyla profesyonel uygulamalarda güvenle tercih edilir. Kuru veya yaş zeminlerde üstün performans sunar.',
+    productImage: '/images/vinil.png',
     buttonText: 'Ürün Detayı',
-    buttonLink: '#',
+    buttonLink: 'products/vinil',
   },
 ]
 

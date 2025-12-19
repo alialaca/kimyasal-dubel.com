@@ -44,24 +44,27 @@ withDefaults(defineProps<Props>(), {
     <!-- Navbar -->
     <Navbar />
 
-    <!-- Content -->
-    <div class="hero__container">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          <span class="hero__title-highlight">{{ titleHighlight }}</span>
-          <span class="hero__title-main">{{ subtitle }}</span>
-        </h1>
-        <p class="hero__description">{{ description }}</p>
+    <!-- Main Content Wrapper -->
+    <div class="hero__main">
+      <!-- Content -->
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__title-highlight">{{ titleHighlight }}</span>
+            <span class="hero__title-main">{{ subtitle }}</span>
+          </h1>
+          <p class="hero__description">{{ description }}</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Products Image -->
-    <div class="hero__products">
-      <NuxtImg
-        :src="productsImage"
-        alt="Bossong Ürünleri"
-        class="hero__products-img"
-      />
+      <!-- Products Image -->
+      <div class="hero__products">
+        <NuxtImg
+          :src="productsImage"
+          alt="Bossong Ürünleri"
+          class="hero__products-img"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -69,9 +72,22 @@ withDefaults(defineProps<Props>(), {
 <style scoped>
 .hero {
   position: relative;
-  min-height: 790px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   font-family: 'DM Sans', sans-serif;
+}
+
+/* Main Content Wrapper */
+.hero__main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 /* Background Gradient */
@@ -168,12 +184,9 @@ withDefaults(defineProps<Props>(), {
 
 /* Container */
 .hero__container {
-  position: relative;
-  z-index: 2;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 24px;
-  padding-top: 140px;
 }
 
 /* Content */
@@ -214,8 +227,6 @@ withDefaults(defineProps<Props>(), {
 
 /* Products Image */
 .hero__products {
-  position: relative;
-  z-index: 2;
   width: 100%;
   max-width: 1305px;
   margin: 40px auto 0;
@@ -245,14 +256,6 @@ withDefaults(defineProps<Props>(), {
 }
 
 @media (max-width: 1024px) {
-  .hero {
-    min-height: 700px;
-  }
-
-  .hero__container {
-    padding-top: 120px;
-  }
-
   .hero__title-highlight {
     font-size: 48px;
   }
@@ -277,14 +280,6 @@ withDefaults(defineProps<Props>(), {
 }
 
 @media (max-width: 768px) {
-  .hero {
-    min-height: 600px;
-  }
-
-  .hero__container {
-    padding-top: 100px;
-  }
-
   .hero__title-highlight {
     font-size: 36px;
   }
@@ -319,10 +314,6 @@ withDefaults(defineProps<Props>(), {
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 550px;
-  }
-
   .hero__title-highlight {
     font-size: 28px;
   }

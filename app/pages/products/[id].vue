@@ -256,6 +256,7 @@ useHead({
       </section>
     </main>
   </div>
+  <FooterSection/>
 </template>
 
 <style scoped>

@@ -54,6 +54,8 @@ const products = [
   </div>
 </template>
 
-<style scoped>
-
+<style>
+body {
+  margin: 0 !important;
+}
 </style>

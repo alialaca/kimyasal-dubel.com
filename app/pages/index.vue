@@ -50,6 +50,7 @@ const products = [
       :variant="index % 2 === 0 ? 'light' : 'dark'"
     />
     <SoftwareSection/>
+    <FooterSection/>
   </div>
 </template>
 

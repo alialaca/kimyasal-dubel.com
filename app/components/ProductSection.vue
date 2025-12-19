@@ -110,8 +110,9 @@ const isReversed = computed(() => props.variant === 'dark')
 .product-section__image {
   position: relative;
   z-index: 1;
-  max-height: 550px;
+  max-width: 100%;
   width: auto;
+  height: auto;
   object-fit: contain;
 }
 

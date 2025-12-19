@@ -49,6 +49,7 @@ const products = [
       :buttonLink="product.buttonLink"
       :variant="index % 2 === 0 ? 'light' : 'dark'"
     />
+    <SoftwareSection/>
   </div>
 </template>
 

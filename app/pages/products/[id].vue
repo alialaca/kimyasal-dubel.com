@@ -108,14 +108,14 @@ const products: Record<string, Product> = {
     name: 'EPOXY 21 Kimyasal Dübel',
     shortDescription: 'ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu ile büyük ölçekli projelerde güvenle kullanılır.',
     badge: 'Çift CE Belgeli',
-    image: '/images/products/epoxy-21.png',
+    image: '/images/products/epoxy21.png',
     features: [
       { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '10 dakika' },
       { icon: '/images/icons/yuksek-dayanim.png', title: 'Derin Ankraj', subtitle: '2500 mm' },
       { icon: '/images/icons/kolay-uygulama.png', title: 'Su Direnci', subtitle: 'Islak Zemin' }
     ],
-    certificationsImage: '/images/certifications/epoxy-21.png',
-    technicalPdf: '/docs/epoxy-21-technical.pdf',
+    certificationsImage: '/images/certifications/epoxy21.png',
+    technicalPdf: '/docs/epoxy21-technical.pdf',
     content: {
       description: 'EPOXY 21, ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu, su dolu deliklerde dahi güçlü performansı ve 2500 mm\'ye kadar ankrajlama derinliği ile büyük ölçekli projelerde güvenle kullanılır.',
       features: [
@@ -158,13 +158,21 @@ useHead({
       <!-- Hero Section -->
       <section class="product-hero">
         <div class="product-hero__container">
-          <!-- Product Image -->
+          <!-- Product Image & Certifications -->
           <div class="product-hero__image-wrapper">
             <NuxtImg
               :src="product.image"
               :alt="product.name"
               class="product-hero__image"
             />
+            <!-- Certifications -->
+            <div class="product-hero__certifications">
+              <NuxtImg
+                :src="product.certificationsImage"
+                :alt="`${product.name} Sertifikalar`"
+                class="product-hero__certifications-img"
+              />
+            </div>
           </div>
 
           <!-- Product Info -->
@@ -198,15 +206,6 @@ useHead({
                   <span class="product-hero__feature-subtitle">{{ feature.subtitle }}</span>
                 </div>
               </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="product-hero__certifications">
-              <NuxtImg
-                :src="product.certificationsImage"
-                :alt="`${product.name} Sertifikalar`"
-                class="product-hero__certifications-img"
-              />
             </div>
 
             <!-- Buttons -->
@@ -415,12 +414,13 @@ useHead({
 
 /* Certifications */
 .product-hero__certifications {
-  margin-bottom: 32px;
+  margin-top: 24px;
+  text-align: center;
 }
 
 .product-hero__certifications-img {
-  max-width: 100%;
-  height: auto;
+  height: 75px;
+  width: auto;
   object-fit: contain;
 }
 

@@ -38,6 +38,7 @@ const products = [
 
 <template>
   <div>
+    <HeroSection />
     <ProductSection
       v-for="(product, index) in products"
       :key="index"

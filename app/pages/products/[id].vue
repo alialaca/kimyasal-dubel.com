@@ -5,11 +5,6 @@ interface ProductFeature {
   subtitle: string
 }
 
-interface ProductCertificate {
-  image: string
-  label: string
-}
-
 interface ProductContent {
   description: string
   features: string[]
@@ -23,7 +18,7 @@ interface Product {
   badge?: string
   image: string
   features: ProductFeature[]
-  certificates: ProductCertificate[]
+  certificationsImage: string
   technicalPdf?: string
   content: ProductContent
 }
@@ -40,15 +35,11 @@ const products: Record<string, Product> = {
     badge: 'ETA Onaylı',
     image: '/images/products/vinil.png',
     features: [
-      { icon: 'mdi:clock-fast', title: 'Hızlı Sertleşme', subtitle: '20 dakika' },
-      { icon: 'mdi:shield-check', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
-      { icon: 'mdi:hand-okay', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '20 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
     ],
-    certificates: [
-      { image: '/images/certificates/eta.png', label: 'ETA - 09/0140' },
-      { image: '/images/certificates/ce.png', label: 'CE' },
-      { image: '/images/certificates/seismic.png', label: 'SEISMIC' }
-    ],
+    certificationsImage: '/images/certifications/vinil.png',
     technicalPdf: '/docs/vinil-technical.pdf',
     content: {
       description: 'VINIL Kimyasal Dübel, modern inşaat sektörünün en zorlu gereksinimlerini karşılamak için geliştirilmiş yüksek performanslı bir bağlantı çözümüdür. Stiren içermeyen özel formülü sayesinde çevre dostu bir alternatif sunarken, mükemmel mekanik özellikler ve dayanıklılık sağlar.',
@@ -69,16 +60,11 @@ const products: Record<string, Product> = {
     badge: 'ETA Onaylı',
     image: '/images/products/v-plus.png',
     features: [
-      { icon: 'mdi:clock-fast', title: 'Hızlı Sertleşme', subtitle: '15 dakika' },
-      { icon: 'mdi:shield-check', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
-      { icon: 'mdi:hand-okay', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '15 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
     ],
-    certificates: [
-      { image: '/images/certificates/eta.png', label: 'ETA - 09/0140' },
-      { image: '/images/certificates/ce.png', label: 'CE' },
-      { image: '/images/certificates/c2.png', label: 'C2' },
-      { image: '/images/certificates/fixing.png', label: 'FIXING' }
-    ],
+    certificationsImage: '/images/certifications/v-plus.png',
     technicalPdf: '/docs/v-plus-technical.pdf',
     content: {
       description: 'V-Plus Kimyasal Dübel, modern inşaat sektörünün en zorlu gereksinimlerini karşılamak için geliştirilmiş yüksek performanslı bir bağlantı çözümüdür. Stiren içermeyen özel formülü sayesinde çevre dostu bir alternatif sunarken, mükemmel mekanik özellikler ve dayanıklılık sağlar.',
@@ -99,15 +85,11 @@ const products: Record<string, Product> = {
     badge: 'ETA Onaylı',
     image: '/images/products/e-plus.png',
     features: [
-      { icon: 'mdi:clock-fast', title: 'Hızlı Sertleşme', subtitle: '12 dakika' },
-      { icon: 'mdi:shield-check', title: 'Sismik Dayanım', subtitle: 'C2 Sınıfı' },
-      { icon: 'mdi:fire', title: 'Yangın Direnci', subtitle: 'R120' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '12 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Sismik Dayanım', subtitle: 'C2 Sınıfı' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Yangın Direnci', subtitle: 'R120' }
     ],
-    certificates: [
-      { image: '/images/certificates/eta.png', label: 'ETA - 09/0246' },
-      { image: '/images/certificates/ce.png', label: 'CE' },
-      { image: '/images/certificates/c2.png', label: 'C2' }
-    ],
+    certificationsImage: '/images/certifications/e-plus.png',
     technicalPdf: '/docs/e-plus-technical.pdf',
     content: {
       description: 'E-Plus Kimyasal Dübel, saf epoksi reçine bazlı iki bileşenli formülüyle en yüksek performans gereksinimlerini karşılar. Özellikle sismik bölgelerde ve yangın güvenliğinin kritik olduğu projelerde tercih edilir.',
@@ -128,15 +110,11 @@ const products: Record<string, Product> = {
     badge: 'Çift CE Belgeli',
     image: '/images/products/epoxy-21.png',
     features: [
-      { icon: 'mdi:clock-fast', title: 'Hızlı Sertleşme', subtitle: '10 dakika' },
-      { icon: 'mdi:ruler', title: 'Derin Ankraj', subtitle: '2500 mm' },
-      { icon: 'mdi:water', title: 'Su Direnci', subtitle: 'Islak Zemin' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '10 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Derin Ankraj', subtitle: '2500 mm' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Su Direnci', subtitle: 'Islak Zemin' }
     ],
-    certificates: [
-      { image: '/images/certificates/eta.png', label: 'ETA - 09/0246' },
-      { image: '/images/certificates/ce.png', label: 'CE' },
-      { image: '/images/certificates/ce.png', label: 'CE' }
-    ],
+    certificationsImage: '/images/certifications/epoxy-21.png',
     technicalPdf: '/docs/epoxy-21-technical.pdf',
     content: {
       description: 'EPOXY 21, ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu, su dolu deliklerde dahi güçlü performansı ve 2500 mm\'ye kadar ankrajlama derinliği ile büyük ölçekli projelerde güvenle kullanılır.',
@@ -210,7 +188,11 @@ useHead({
                 :key="feature.title"
                 class="product-hero__feature"
               >
-                <Icon :name="feature.icon" size="24" class="product-hero__feature-icon" />
+                <NuxtImg
+                  :src="feature.icon"
+                  :alt="feature.title"
+                  class="product-hero__feature-icon"
+                />
                 <div class="product-hero__feature-text">
                   <span class="product-hero__feature-title">{{ feature.title }}</span>
                   <span class="product-hero__feature-subtitle">{{ feature.subtitle }}</span>
@@ -218,16 +200,13 @@ useHead({
               </div>
             </div>
 
-            <!-- Certificates -->
-            <div class="product-hero__certificates">
-              <div
-                v-for="cert in product.certificates"
-                :key="cert.label"
-                class="product-hero__certificate"
-              >
-                <NuxtImg :src="cert.image" :alt="cert.label" class="product-hero__certificate-img" />
-                <span class="product-hero__certificate-label">{{ cert.label }}</span>
-              </div>
+            <!-- Certifications -->
+            <div class="product-hero__certifications">
+              <NuxtImg
+                :src="product.certificationsImage"
+                :alt="`${product.name} Sertifikalar`"
+                class="product-hero__certifications-img"
+              />
             </div>
 
             <!-- Buttons -->
@@ -411,7 +390,9 @@ useHead({
 }
 
 .product-hero__feature-icon {
-  color: #183f78;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .product-hero__feature-text {
@@ -432,31 +413,15 @@ useHead({
   color: #575757;
 }
 
-/* Certificates */
-.product-hero__certificates {
-  display: flex;
-  gap: 16px;
+/* Certifications */
+.product-hero__certifications {
   margin-bottom: 32px;
-  flex-wrap: wrap;
 }
 
-.product-hero__certificate {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.product-hero__certificate-img {
-  height: 50px;
-  width: auto;
+.product-hero__certifications-img {
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
-}
-
-.product-hero__certificate-label {
-  font-size: 10px;
-  color: #575757;
-  text-align: center;
 }
 
 /* Buttons */
@@ -609,8 +574,8 @@ useHead({
     max-width: 160px;
   }
 
-  .product-hero__certificates {
-    justify-content: center;
+  .product-hero__certifications {
+    text-align: center;
   }
 
   .product-hero__buttons {
@@ -645,10 +610,6 @@ useHead({
 
   .product-hero__feature {
     min-width: 100%;
-  }
-
-  .product-hero__certificate-img {
-    height: 40px;
   }
 }
 </style>

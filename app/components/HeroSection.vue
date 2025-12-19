@@ -41,9 +41,6 @@ withDefaults(defineProps<Props>(), {
       <div class="hero__circle"></div>
     </div>
 
-    <!-- Navbar -->
-    <Navbar />
-
     <!-- Main Content Wrapper -->
     <div class="hero__main">
       <!-- Content -->

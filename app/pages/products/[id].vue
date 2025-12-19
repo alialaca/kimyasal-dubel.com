@@ -143,9 +143,6 @@ useHead({
 
 <template>
   <div class="product-page">
-    <!-- Navbar -->
-    <Navbar />
-
     <!-- Product Not Found -->
     <div v-if="!product" class="product-page__not-found">
       <h1>Ürün Bulunamadı</h1>
@@ -255,8 +252,9 @@ useHead({
         </div>
       </section>
     </main>
+
+    <FooterSection />
   </div>
-  <FooterSection/>
 </template>
 
 <style scoped>

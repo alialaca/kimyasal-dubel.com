@@ -16,7 +16,7 @@ const serviceLinks = [
 const socialLinks = [
   { icon: 'mdi:instagram', href: 'https://instagram.com', label: 'Instagram' },
   { icon: 'mdi:facebook', href: 'https://facebook.com', label: 'Facebook' },
-  { icon: 'mdi:tiktok', href: 'https://tiktok.com', label: 'TikTok' },
+  { icon: 'ic:baseline-tiktok', href: 'https://tiktok.com', label: 'TikTok' },
   { icon: 'mdi:youtube', href: 'https://youtube.com', label: 'YouTube' },
   { icon: 'mdi:twitter', href: 'https://twitter.com', label: 'Twitter' },
   { icon: 'mdi:linkedin', href: 'https://linkedin.com', label: 'LinkedIn' }

@@ -384,20 +384,23 @@ useHead({
   border-radius: 12px;
   padding: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-width: 145px;
 }
 
 .product-hero__feature-icon {
   width: 28px;
   height: 28px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .product-hero__feature-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .product-hero__feature-title {
@@ -408,8 +411,8 @@ useHead({
 }
 
 .product-hero__feature-subtitle {
-  font-size: 12px;
-  color: #575757;
+  font-size: 10px;
+  color: #313131;
 }
 
 /* Certifications */

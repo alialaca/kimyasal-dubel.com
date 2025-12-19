@@ -10,7 +10,7 @@ const navLinks: NavLink[] = [
   { label: 'V-Plus', to: '/products/v-plus' },
   { label: 'E-Plus', to: '/products/e-plus' },
   { label: 'Epoxy 21', to: '/products/epoxy-21' },
-  { label: 'İletişim', to: '/iletisim' }
+  { label: 'İletişim', to: '#footer' }
 ]
 
 const isMobileMenuOpen = ref(false)

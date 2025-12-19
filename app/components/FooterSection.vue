@@ -24,7 +24,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__container">
       <!-- Main Content -->
       <div class="footer__content">

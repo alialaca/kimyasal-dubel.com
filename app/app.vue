@@ -7,6 +7,11 @@
 </template>
 
 <style>
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Page Transition */
 .page-enter-active,
 .page-leave-active {

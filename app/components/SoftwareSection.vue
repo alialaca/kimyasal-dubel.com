@@ -20,7 +20,7 @@
       <div class="software-section__preview">
         <div class="software-section__laptop">
           <NuxtImg
-            src="/images/software-preview.png"
+            src="/images/software.svg"
             alt="Bossong Hesaplama Programı"
             class="software-section__laptop-img"
           />

@@ -6,7 +6,7 @@ interface ProductFeature {
 }
 
 interface ProductContent {
-  description: string
+  descriptions: string[]
   features: string[]
   applications: string
 }
@@ -31,26 +31,27 @@ const products: Record<string, Product> = {
   'vinil': {
     id: 'vinil',
     name: 'VINIL Kimyasal Dübel',
-    shortDescription: 'Beton, dolu tuğla, delikli tuğla ve ahşapta ağır yüklerin güvenli sabitlenmesi için geliştirilen Bossong epoksiakrilat reçine, stiren içermeyen formülü sayesinde kapalı alanlarda rahatlıkla kullanılabilir.',
+    shortDescription: 'İki bileşenli, stiren içermeyen Bossong epoksiakrilat reçine; beton, dolu tuğla, delikli tuğla ve ahşap yüzeylerde yüksek dayanımlı sabitleme için geliştirilmiştir. Kapalı alanlarda dahi kokusuz, güvenli ve hızlı uygulama imkânı sunar.',
     badge: 'ETA Onaylı',
     image: '/images/products/vinil.png',
     features: [
-      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '20 dakika' },
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '15 dakika' },
       { icon: '/images/icons/yuksek-dayanim.png', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
       { icon: '/images/icons/kolay-uygulama.png', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
     ],
     certificationsImage: '/images/certifications/vinil.png',
     technicalPdf: '/docs/vinil-technical.pdf',
     content: {
-      description: 'VINIL Kimyasal Dübel, modern inşaat sektörünün en zorlu gereksinimlerini karşılamak için geliştirilmiş yüksek performanslı bir bağlantı çözümüdür. Stiren içermeyen özel formülü sayesinde çevre dostu bir alternatif sunarken, mükemmel mekanik özellikler ve dayanıklılık sağlar.',
+      descriptions: ['Bossong epoksiakrilat reçine, çatlak olmayan beton ve diğer zorlu yüzeylerde ağır yüklerin sabitlenmesinde üstün performans sağlar. Stiren içermeyen özel formülü sayesinde rahatsız edici koku olmadan, hem iç hem dış mekanlarda güvenle kullanılabilir. ETA-15/0708 sertifikası ile M8–M16 arası dişli çubuklarda ve çeşitli ankraj derinliklerinde kullanım onayına sahiptir. Zorlu sıcaklık koşullarında dahi yüksek performansını korur.'],
       features: [
         'Beton, tuğla, doğal taş ve ahşap gibi çeşitli yüzeylerde kullanım',
         'Stiren içermeyen çevre dostu formül',
         'Yüksek yük taşıma kapasitesi ve uzun ömür',
         'Hızlı sertleşme ve kolay uygulama',
-        'Geniş sıcaklık aralığında kullanım (-40°C ile +80°C arası)'
+        'Geniş sıcaklık aralığında kullanım (-40°C ile +80°C arası)',
+        'Kullanım Durumu: Kuru veya yaş beton'
       ],
-      applications: 'Yapısal çelik bağlantıları, makine temelleri, korkuluk montajları, asansör rayları, köprü parapet bağlantıları ve endüstriyel ekipman montajları gibi kritik uygulamalarda güvenle kullanılabilir.'
+      applications: 'Ağır raf sistemleri, çelik konstrüksiyonlar, makine ve ekipman montajları ile ahşap ve metal yapı bağlantılarında, ayrıca betonarme projelerde güvenli ankraj için idealdir.'
     }
   },
   'v-plus': {
@@ -67,7 +68,7 @@ const products: Record<string, Product> = {
     certificationsImage: '/images/certifications/v-plus.png',
     technicalPdf: '/docs/v-plus-technical.pdf',
     content: {
-      description: 'V-Plus Kimyasal Dübel, modern inşaat sektörünün en zorlu gereksinimlerini karşılamak için geliştirilmiş yüksek performanslı bir bağlantı çözümüdür. Stiren içermeyen özel formülü sayesinde çevre dostu bir alternatif sunarken, mükemmel mekanik özellikler ve dayanıklılık sağlar.',
+      descriptions: ['V-Plus Kimyasal Dübel, modern inşaat sektörünün en zorlu gereksinimlerini karşılamak için geliştirilmiş yüksek performanslı bir bağlantı çözümüdür. Stiren içermeyen özel formülü sayesinde çevre dostu bir alternatif sunarken, mükemmel mekanik özellikler ve dayanıklılık sağlar.'],
       features: [
         'Beton, tuğla, doğal taş ve ahşap gibi çeşitli yüzeylerde kullanım',
         'Stiren içermeyen çevre dostu formül',
@@ -81,51 +82,68 @@ const products: Record<string, Product> = {
   'e-plus': {
     id: 'e-plus',
     name: 'E-PLUS Kimyasal Dübel',
-    shortDescription: 'Stiren içermeyen, iki bileşenli saf epoksi formülüyle sismik dayanım, yangına karşı direnç ve 100 yıla varan hizmet ömrü sunar. ETA belgeli bu ürün zorlu yüzeylerde yüksek tutunma performansı sağlar.',
+    shortDescription: '',
     badge: 'ETA Onaylı',
     image: '/images/products/e-plus.png',
     features: [
-      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '12 dakika' },
-      { icon: '/images/icons/yuksek-dayanim.png', title: 'Sismik Dayanım', subtitle: 'C2 Sınıfı' },
-      { icon: '/images/icons/kolay-uygulama.png', title: 'Yangın Direnci', subtitle: 'R120' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '15 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
     ],
     certificationsImage: '/images/certifications/e-plus.png',
     technicalPdf: '/docs/e-plus-technical.pdf',
     content: {
-      description: 'E-Plus Kimyasal Dübel, saf epoksi reçine bazlı iki bileşenli formülüyle en yüksek performans gereksinimlerini karşılar. Özellikle sismik bölgelerde ve yangın güvenliğinin kritik olduğu projelerde tercih edilir.',
-      features: [
-        'Saf epoksi reçine bazlı iki bileşenli formül',
-        'C2 sınıfı sismik performans',
-        'R120 yangın direnci sınıfı',
-        '100 yıla varan hizmet ömrü',
-        'Çatlaklı ve çatlaksız betonlarda kullanım'
+      descriptions: [
+          'Yüksek performanslı saf epoksi formülüyle üretilen bu kimyasal ankraj, 3:1 formatında 385 ml ve 585 ml kartuşlarda sunulur. EAD 330499-01-0601 ve EAD 330087-01-0601 standartlarına göre ETA onayına sahiptir ve 100 yıllık hizmet ömrüyle büyük ölçekli projeler için idealdir.',
+          'M12–M24 çapları için C2 sismik yeterlilik, M8–M30 dişli çubuklar ve 8–32 mm takviyeli çubuklar için statik ve yarı statik sertifikalıdır. Hem delinmiş hem de elmas karotlu deliklerde kullanılabilir, 2500 mm’ye kadar montaj derinliğine uygundur. Yüksek akışkanlığı sayesinde derin deliklerde ve düşük sıcaklıklarda kolay uygulanır, tiksotropik yapısı ise havai montajlarda sarkma yapmaz.  R240 yangın dayanımı, LEED GOLD çevre sertifikası ve CAM uyumluluğu ile hem teknik hem çevresel açıdan üst seviye bir çözümdür.'
       ],
-      applications: 'Deprem bölgelerindeki yapılar, yüksek güvenlik gerektiren endüstriyel tesisler, köprüler, tüneller ve kritik altyapı projeleri için idealdir.'
+      features: [
+        'Stiren içermeyen, saf epoksi formül',
+        '100 yıl hizmet ömrü – uzun vadeli projeler için ideal',
+        'C2 sismik onay (M12–M24) ve geniş çap aralığı (M8–M30 dişli, 8–32 mm takviyeli çubuk)',
+        'Hem çatlaklı hem çatlaksız betonda yüksek bağ performansı',
+        '2500 mm’ye kadar montaj derinliği ve derin deliklerde kolay uygulama',
+        'R240 yangın dayanımı',
+        'LEED GOLD sertifikalı ve CAM gerekliliklerine uygun',
+        'Kuru, ıslak ve su dolu deliklerde güvenli sertleşme',
+        'Hızlı sıkma süresi ile şantiyede verimlilik',
+        'Havai uygulamalarda sarkma yapmayan tiksotropik yapı',
+        'Ön karıştırma gerektirmeyen, kartuş içi otomatik karışım sistemi',
+        'Onarım ve dolgu macunu olarak da kullanılabilme'
+      ],
+      applications: 'Büyük ölçekli altyapı projeleri, köprü ve tünel yapıları, yüksek katlı bina montajları, çelik konstrüksiyon sabitleme, sismik güçlendirme çalışmaları, yangına dayanıklı montajlar, duvar ve ahşap sabitleme ile onarım işlerinde kullanıma uygundur.'
     }
   },
   'epoxy-21': {
     id: 'epoxy-21',
     name: 'EPOXY 21 Kimyasal Dübel',
-    shortDescription: 'ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu ile büyük ölçekli projelerde güvenle kullanılır.',
-    badge: 'Çift CE Belgeli',
+    shortDescription: 'İki bileşenli Bossong EPOXY 21, beton, tuğla ve ahşap yüzeylerde ağır yüklerin güvenli sabitlenmesi için tasarlanmış, sismik onaylı ve yüksek tutunma değerine sahip güçlü bir ankraj sistemidir.',
+    badge: 'Eta Onaylı',
     image: '/images/products/epoxy21.png',
     features: [
-      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '10 dakika' },
-      { icon: '/images/icons/yuksek-dayanim.png', title: 'Derin Ankraj', subtitle: '2500 mm' },
-      { icon: '/images/icons/kolay-uygulama.png', title: 'Su Direnci', subtitle: 'Islak Zemin' }
+      { icon: '/images/icons/hizli-sertlesme.png', title: 'Hızlı Sertleşme', subtitle: '15 dakika' },
+      { icon: '/images/icons/yuksek-dayanim.png', title: 'Yüksek Dayanım', subtitle: 'C20/25 beton' },
+      { icon: '/images/icons/kolay-uygulama.png', title: 'Kolay Uygulama', subtitle: 'Pratik Sistem' }
     ],
     certificationsImage: '/images/certifications/epoxy21.png',
     technicalPdf: '/docs/epoxy21-technical.pdf',
     content: {
-      description: 'EPOXY 21, ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu, su dolu deliklerde dahi güçlü performansı ve 2500 mm\'ye kadar ankrajlama derinliği ile büyük ölçekli projelerde güvenle kullanılır.',
-      features: [
-        'Çift CE belgeli yüksek kalite standardı',
-        'C2 sismik performans sınıfı',
-        '2500 mm\'ye kadar ankrajlama derinliği',
-        'Su dolu deliklerde uygulama imkanı',
-        'Elektrik izolasyonu ve tiksotropik yapı'
+      descriptions: [
+          'EPOXY 21, çift CE işaretine sahip, C2 kategorisinde sismik onaylı, iki bileşenli epoksi bazlı kimyasal ankraj reçinesidir. Avrupa Teknik Değerlendirmesi (ETA) onayları sayesinde M8–M30 arası dişli çubuklar ve 8–32 mm çapındaki çubuklar için en yüksek güvenilirlik standartlarını karşılar.',
+          'Kuru, yaş veya su dolu deliklerde yüke bindirme sürelerini uzatmadan kullanılabilir. Çatlaksız beton için M8–M30, çatlaklı beton için M12–M24 aralığında sertifikalıdır. 2500 mm’ye kadar ankraj derinliğiyle geniş uygulama esnekliği sunar. Elektrik izolasyonu sağlayarak gezici akımların etkisini ortadan kaldırır ve yüksek dielektrik güce sahiptir. Hidrolize karşı dayanıklı yapısı, uzun ömürlü kullanım sağlar.'
       ],
-      applications: 'Büyük ölçekli altyapı projeleri, barajlar, limanlar, endüstriyel tesisler ve ağır yük taşıyan yapısal bağlantılarda güvenle kullanılır.'
+      features: [
+        'Beton, tuğla, doğal taş ve ahşap yüzeylerde kullanım',
+        'C2 sismik onay ve çift CE sertifikası',
+        'Yüksek yük taşıma kapasitesi ve uzun ömürlü dayanım',
+        'Kuru, yaş veya su dolu deliklerde güvenli uygulama',
+        '2500 mm’ye kadar derin ankraj imkânı',
+        'Elektrik izolasyonu sağlayan yüksek dielektrik güç',
+        'Genleşmeyen yapı sayesinde taban malzemesinde gerilim oluşturmaz',
+        'Hızlı ve kolay uygulama – reçine ve sertleştirici, uygulama sırasında otomatik karışır',
+        '-40°C ile +80°C arasında geniş sıcaklık aralığında kullanım'
+      ],
+      applications: 'Sismik riskli bölgelerde ağır yük montajları, çelik konstrüksiyon sabitleme, makine ve ekipman kurulumu, köprü ve altyapı projeleri, elektrik izolasyonu gereken montajlar ve betonarme onarımlar için idealdir.'
     }
   }
 }
@@ -231,7 +249,7 @@ useHead({
           <!-- Description -->
           <div class="product-content__section">
             <h2 class="product-content__heading">Ürün Açıklaması</h2>
-            <p class="product-content__text">{{ product.content.description }}</p>
+            <p v-for="description in product.content.descriptions" class="product-content__text">{{ description }}</p>
           </div>
 
           <!-- Features -->
@@ -497,7 +515,7 @@ useHead({
   font-size: 18px;
   line-height: 1.6;
   color: #000000;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
 .product-content__list {

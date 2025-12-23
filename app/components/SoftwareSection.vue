@@ -63,16 +63,6 @@
           />
         </div>
       </div>
-
-      <!-- Slider Navigation -->
-      <div class="software-section__nav">
-        <button class="software-section__nav-btn software-section__nav-btn--prev" aria-label="Önceki">
-          <Icon name="mdi:chevron-left" size="24" />
-        </button>
-        <button class="software-section__nav-btn software-section__nav-btn--next" aria-label="Sonraki">
-          <Icon name="mdi:chevron-right" size="24" />
-        </button>
-      </div>
     </div>
   </section>
 </template>

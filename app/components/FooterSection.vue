@@ -127,7 +127,7 @@ const socialLinks = [
 .footer__content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 60px;
   margin-bottom: 40px;
 }

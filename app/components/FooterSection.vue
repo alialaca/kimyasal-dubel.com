@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const quickLinks = [
-  { label: 'Hakkımızda', href: '/hakkimizda' },
-  { label: 'Ürünler', href: '/urunler' },
-  { label: 'İndirmeler', href: '/indirmeler' },
-  { label: 'İletişim', href: '/iletisim' }
+  { label: 'Hakkımızda', href: '#' },
+  { label: 'Ürünler', href: '#' },
+  { label: 'İndirmeler', href: '#' },
+  { label: 'İletişim', href: '#' }
 ]
 
 const serviceLinks = [
-  { label: 'Teknik Servis', href: '/teknik-servis' },
-  { label: 'Bayilik Başvurusu', href: '/bayilik' },
-  { label: 'Kurumsal Satış', href: '/kurumsal' },
-  { label: 'Destek', href: '/destek' }
+  { label: 'Teknik Servis', href: '#' },
+  { label: 'Bayilik Başvurusu', href: '#' },
+  { label: 'Kurumsal Satış', href: '#' },
+  { label: 'Destek', href: '#' }
 ]
 
 const socialLinks = [

@@ -39,7 +39,12 @@
         </div>
 
         <!-- QR Code Card -->
-        <div class="software-section__qr-card">
+        <a
+          href="https://www.bossong.com.tr/new-software-bossong-fix-40.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="software-section__qr-card"
+        >
           <div class="software-section__qr-code">
             <NuxtImg
               src="/images/qr-code.png"
@@ -52,7 +57,7 @@
             <strong>QR Kodu</strong>
             <span>okutun!</span>
           </div>
-        </div>
+        </a>
 
         <!-- REB Logo -->
         <div class="software-section__brand">
@@ -168,6 +173,13 @@
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 0 20px 50px rgba(49, 49, 49, 0.05);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.software-section__qr-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(49, 49, 49, 0.1);
 }
 
 .software-section__qr-code {

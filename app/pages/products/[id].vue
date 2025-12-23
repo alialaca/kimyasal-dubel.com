@@ -225,7 +225,7 @@ useHead({
 
             <!-- Buttons -->
             <div class="product-hero__buttons">
-              <NuxtLink to="/iletisim" class="product-hero__btn product-hero__btn--primary">
+              <NuxtLink to="#footer" class="product-hero__btn product-hero__btn--primary">
                 <Icon name="mdi:phone" size="20" />
                 <span>Detaylı Bilgi Al</span>
               </NuxtLink>

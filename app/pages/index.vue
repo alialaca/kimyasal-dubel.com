@@ -20,7 +20,7 @@ const products = [
     id: 'epoxy21',
     titleMain: 'EPOXY 21',
     description: 'EPOXY 21, ETA onaylı çift CE belgeli yapısıyla; beton, dolu tuğla ve ahşap uygulamalarda yüksek tutunma sağlayan iki bileşenli epoksi reçinedir. C2 sismik uygunluğu, su dolu deliklerde dahi güçlü performansı ve 2500 mm’ye kadar ankrajlama derinliği ile büyük ölçekli projelerde güvenle kullanılır. Elektrik izolasyonu ve tiksotropik yapısıyla da fark yaratır.',
-    productImage: '/images/epoxy21.png',
+    productImage: '/images/epoxy-21.png',
     buttonText: 'Ürün Detayı',
     buttonLink: '/products/epoxy21',
   },

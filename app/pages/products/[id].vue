@@ -157,6 +157,24 @@ useHead({
     { name: 'description', content: () => product.value?.shortDescription || '' }
   ]
 })
+
+onMounted(() => {
+  if (product.value) {
+    umTrackEvent('product_view', { product: product.value.name, productId })
+  }
+})
+
+function trackPdfDownload() {
+  if (product.value) {
+    umTrackEvent('pdf_download', { product: product.value.name, productId })
+  }
+}
+
+function trackContactClick() {
+  if (product.value) {
+    umTrackEvent('contact_click', { product: product.value.name, productId })
+  }
+}
 </script>
 
 <template>
@@ -225,7 +243,7 @@ useHead({
 
             <!-- Buttons -->
             <div class="product-hero__buttons">
-              <NuxtLink to="#footer" class="product-hero__btn product-hero__btn--primary">
+              <NuxtLink to="#footer" class="product-hero__btn product-hero__btn--primary" @click="trackContactClick">
                 <Icon name="mdi:phone" size="20" />
                 <span>Detaylı Bilgi Al</span>
               </NuxtLink>
@@ -234,6 +252,7 @@ useHead({
                 :href="product.technicalPdf"
                 target="_blank"
                 class="product-hero__btn product-hero__btn--secondary"
+                @click="trackPdfDownload"
               >
                 <Icon name="mdi:file-pdf-box" size="20" />
                 <span>Teknik Bilgi PDF</span>

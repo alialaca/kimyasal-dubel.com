@@ -1,4 +1,7 @@
 <script setup lang="ts">
+function trackQrClick() {
+  umTrackEvent('software_qr_click', { target: 'bossong_fix_download' })
+}
 </script>
 
 <template>
@@ -44,6 +47,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="software-section__qr-card"
+          @click="trackQrClick"
         >
           <div class="software-section__qr-code">
             <NuxtImg

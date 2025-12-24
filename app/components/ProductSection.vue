@@ -17,6 +17,10 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const isReversed = computed(() => props.variant === 'dark')
+
+function trackProductClick() {
+  umTrackEvent('product_click', { product: props.titleMain })
+}
 </script>
 
 <template>
@@ -40,7 +44,7 @@ const isReversed = computed(() => props.variant === 'dark')
             <span class="product-section__title-sub">{{ titleSub }}</span>
           </h2>
           <p class="product-section__description">{{ description }}</p>
-          <NuxtLink :to="buttonLink" class="product-section__button">
+          <NuxtLink :to="buttonLink" class="product-section__button" @click="trackProductClick">
             {{ buttonText }}
           </NuxtLink>
         </div>

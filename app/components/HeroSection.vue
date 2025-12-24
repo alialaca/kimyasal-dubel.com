@@ -47,15 +47,15 @@ withDefaults(defineProps<Props>(), {
       <div class="hero__container">
         <div class="hero__content">
           <h1 class="hero__title">
-            <span class="hero__title-highlight">{{ titleHighlight }}</span>
-            <span class="hero__title-main">{{ subtitle }}</span>
+            <span class="hero__title-highlight" data-aos="fade-down">{{ titleHighlight }}</span>
+            <span class="hero__title-main" data-aos="fade-down" data-aos-delay="100">{{ subtitle }}</span>
           </h1>
-          <p class="hero__description">{{ description }}</p>
+          <p class="hero__description" data-aos="fade-up" data-aos-delay="200">{{ description }}</p>
         </div>
       </div>
 
       <!-- Products Image -->
-      <div class="hero__products">
+      <div class="hero__products" data-aos="fade-up" data-aos-delay="300">
         <NuxtImg
           :src="productsImage"
           alt="Bossong Ürünleri"

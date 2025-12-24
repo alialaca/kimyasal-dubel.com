@@ -33,7 +33,7 @@ function track(event: string, data?: Record<string, string>) {
       <!-- Main Content -->
       <div class="footer__content">
         <!-- Company Info -->
-        <div class="footer__company">
+        <div class="footer__company" data-aos="fade-right">
           <NuxtImg
             src="/images/fixpro-white.png"
             alt="FixPro"
@@ -61,7 +61,7 @@ function track(event: string, data?: Record<string, string>) {
         </div>
 
         <!-- Links -->
-        <div class="footer__links">
+        <div class="footer__links" data-aos="fade-left" data-aos-delay="100">
           <!-- Quick Links -->
           <div class="footer__links-col">
             <h3 class="footer__links-title">Hızlı Linkler</h3>
@@ -89,7 +89,7 @@ function track(event: string, data?: Record<string, string>) {
       </div>
 
       <!-- Social Links -->
-      <div class="footer__social">
+      <div class="footer__social" data-aos="fade-up" data-aos-delay="200">
         <a
           v-for="social in socialLinks"
           :key="social.icon"

@@ -11,7 +11,7 @@ function trackQrClick() {
 
     <div class="software-section__container">
       <!-- Header -->
-      <div class="software-section__header">
+      <div class="software-section__header" data-aos="fade-up">
         <h2 class="software-section__title">Hesaplama Programı</h2>
         <p class="software-section__description">
           Kimyasal ankrajlar ve sonradan yerleştirilen donatılar için geliştirilmiş, ETA ve Eurocode 2 uyumlu
@@ -20,7 +20,7 @@ function trackQrClick() {
       </div>
 
       <!-- Software Preview -->
-      <div class="software-section__preview">
+      <div class="software-section__preview" data-aos="zoom-in" data-aos-delay="100">
         <div class="software-section__laptop">
           <NuxtImg
             src="/images/software.svg"
@@ -33,7 +33,7 @@ function trackQrClick() {
       <!-- Bottom Section -->
       <div class="software-section__bottom">
         <!-- FIX Logo -->
-        <div class="software-section__brand">
+        <div class="software-section__brand" data-aos="fade-right" data-aos-delay="200">
           <NuxtImg
             src="/images/bossong-fix.png"
             alt="Bossong FIX"
@@ -47,6 +47,8 @@ function trackQrClick() {
           target="_blank"
           rel="noopener noreferrer"
           class="software-section__qr-card"
+          data-aos="fade-up"
+          data-aos-delay="300"
           @click="trackQrClick"
         >
           <div class="software-section__qr-code">
@@ -64,7 +66,7 @@ function trackQrClick() {
         </a>
 
         <!-- REB Logo -->
-        <div class="software-section__brand">
+        <div class="software-section__brand" data-aos="fade-left" data-aos-delay="200">
           <NuxtImg
             src="/images/bossong-reb.png"
             alt="Bossong REB"

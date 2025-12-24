@@ -28,7 +28,7 @@ function trackProductClick() {
     <div class="product-section__container">
       <div :class="['product-section__content', { 'product-section__content--reversed': isReversed }]">
         <!-- Image Side -->
-        <div class="product-section__image-wrapper">
+        <div class="product-section__image-wrapper" :data-aos="isReversed ? 'fade-left' : 'fade-right'">
           <div class="product-section__image-bg"></div>
           <NuxtImg
             :src="productImage"
@@ -38,7 +38,7 @@ function trackProductClick() {
         </div>
 
         <!-- Text Side -->
-        <div class="product-section__text">
+        <div class="product-section__text" :data-aos="isReversed ? 'fade-right' : 'fade-left'" data-aos-delay="100">
           <h2 class="product-section__title">
             <span class="product-section__title-main">{{ titleMain }}</span>
             <span class="product-section__title-sub">{{ titleSub }}</span>

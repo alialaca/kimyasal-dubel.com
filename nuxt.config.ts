@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     umami: {
         id: process.env.UMAMI_ID,
         host: process.env.UMAMI_HOST,
-        // domains: ['kimyasal-dubel.com', 'bossong.fixpro.com.tr'],
-        // ignoreLocalhost: process.env.NODE_ENV === 'development',
+        domains: ['kimyasal-dubel.com', 'bossong.fixpro.com.tr'],
+        ignoreLocalhost: process.env.NODE_ENV === 'development',
     }
 })

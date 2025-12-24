@@ -22,24 +22,8 @@ const socialLinks = [
   { icon: 'mdi:linkedin', href: 'https://tr.linkedin.com/company/fixpro-tr', label: 'LinkedIn' }
 ]
 
-function trackPhoneClick() {
-  umTrackEvent('phone_click', { source: 'footer' })
-}
-
-function trackEmailClick() {
-  umTrackEvent('email_click', { source: 'footer' })
-}
-
-function trackWebsiteClick() {
-  umTrackEvent('website_click', { source: 'footer' })
-}
-
-function trackSocialClick(platform: string) {
-  umTrackEvent('social_click', { platform, source: 'footer' })
-}
-
-function trackFooterLinkClick(label: string, category: string) {
-  umTrackEvent('footer_link_click', { label, category })
+function track(event: string, data?: Record<string, string>) {
+  umTrackEvent(event, { source: 'footer', ...data })
 }
 </script>
 
@@ -61,15 +45,15 @@ function trackFooterLinkClick(label: string, category: string) {
 
           <!-- Contact Info -->
           <div class="footer__contact">
-            <a href="tel:+902327002484" class="footer__contact-item" @click="trackPhoneClick">
+            <a href="tel:+902327002484" class="footer__contact-item" @click="track('phone_click')">
               <Icon name="mdi:phone" size="24" />
               <span>+90 232 700 24 84</span>
             </a>
-            <a href="mailto:satis@fixpro.com.tr" class="footer__contact-item" @click="trackEmailClick">
+            <a href="mailto:satis@fixpro.com.tr" class="footer__contact-item" @click="track('email_click')">
               <Icon name="mdi:email" size="24" />
               <span>satis@fixpro.com.tr</span>
             </a>
-            <a href="https://www.fixpro.com.tr" target="_blank" class="footer__contact-item" @click="trackWebsiteClick">
+            <a href="https://www.fixpro.com.tr" target="_blank" class="footer__contact-item" @click="track('website_click')">
               <Icon name="mdi:web" size="24" />
               <span>www.fixpro.com.tr</span>
             </a>
@@ -83,7 +67,7 @@ function trackFooterLinkClick(label: string, category: string) {
             <h3 class="footer__links-title">Hızlı Linkler</h3>
             <ul class="footer__links-list">
               <li v-for="link in quickLinks" :key="link.href">
-                <NuxtLink :to="link.href" class="footer__link" @click="trackFooterLinkClick(link.label, 'quick_links')">
+                <NuxtLink :to="link.href" class="footer__link" @click="track('footer_link_click', { label: link.label, category: 'quick_links' })">
                   {{ link.label }}
                 </NuxtLink>
               </li>
@@ -95,7 +79,7 @@ function trackFooterLinkClick(label: string, category: string) {
             <h3 class="footer__links-title">Hizmetler</h3>
             <ul class="footer__links-list">
               <li v-for="link in serviceLinks" :key="link.href">
-                <NuxtLink :to="link.href" class="footer__link" @click="trackFooterLinkClick(link.label, 'services')">
+                <NuxtLink :to="link.href" class="footer__link" @click="track('footer_link_click', { label: link.label, category: 'services' })">
                   {{ link.label }}
                 </NuxtLink>
               </li>
@@ -114,7 +98,7 @@ function trackFooterLinkClick(label: string, category: string) {
           rel="noopener noreferrer"
           class="footer__social-link"
           :aria-label="social.label"
-          @click="trackSocialClick(social.label)"
+          @click="track('social_click', { platform: social.label })"
         >
           <Icon :name="social.icon" size="28" />
         </a>
